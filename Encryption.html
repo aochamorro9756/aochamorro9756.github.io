@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Encryption</title>
+    <link rel="shortcut icon" href="images/Favicon.ico">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117409303-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-117409303-1');
+
+    </script>
+  </head>
+
+  <body>
+    <div class="nav">
+      <ul2>
+        <li2><a href="index.html">Home</a></li2>
+        <li2><a href="AboutMe.html"> About Me </a></li2>
+        <li2><a href="Achievements.html"> Achievements </a></li2>
+        <li2><a class="active" href="Encryption.html"> Encryption </a></li2>
+        <li2><a href="Other.html"> Other </a></li2>
+
+      </ul2>
+    </div>
+
+    <div class="box">
+
+
+      <h1> Caesar Cipher</h1>
+      <h5>Here is a basic Caesar cipher encryption program created in JavaScript. Input text into the encryption box to begin.</h5>
+
+      <input id="in">
+
+      <button type="button" onclick="Caesar()">Encrypt</button>
+
+      <p id="out"></p>
+
+      <!–– Encryption program still under construction ––>
+
+      <script>
+        function Caesar() {
+          var asciiCode, encryptedText = "";
+          var index = 0;
+          var decryptedText = "";
+          //input
+          var inVar = document.getElementById("in").value;
+          var inVar2 = document.getElementById("in2").value;
+
+          //processing
+          for (index = 0; index < inVar.length; index++) {
+
+            asciiCode = inVar.charCodeAt(index);
+
+            asciiCode = asciiCode + 3;
+            encryptedText += String.fromCharCode(asciiCode);
+          }
+
+
+          for (index = 0; index < inVar2.length; index++) {
+            asciiCode = inVar2.charCodeAt(index);
+            asciiCode = asciiCode - 3;
+            decryptedText += String.fromCharCode(asciiCode);
+          }
+          //output
+
+          document.getElementById("out").innerHTML = encryptedText;
+          document.getElementById("out2").innerHTML = decryptedText;
+        }
+
+      </script>
+
+      <input id="in2">
+
+      <button type="button" onclick="Caesar()">Decrypt</button>
+
+      <p id="out2"></p>
+
+
+
+    </div>
+  </body>
+
+</html>

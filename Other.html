@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!–– Elements that I had a hard time integrating on other pages ––>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Other</title>
+    <link rel="shortcut icon" href="images/Favicon.ico">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117409303-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-117409303-1');
+
+    </script>
+  </head>
+
+  <body>
+    <div class="nav">
+      <ul2>
+        <li2><a href="index.html">Home</a></li2>
+        <li2><a href="AboutMe.html"> About Me </a></li2>
+        <li2><a href="Achievements.html"> Achievements </a></li2>
+        <li2><a href="Encryption.html"> Encryption </a></li2>
+        <li2><a class="active" href="Other.html"> Other </a></li2>
+      </ul2>
+    </div>
+
+    <div class="box">
+      <h1> Other Elements </h1>
+      <p1> Here are some of the required elements that I will intergate better into my portfolio at another time. </p1>
+      <h2> Usability & Accessibility </h2>
+      <p1> I have designed my website in such a way to make it easily accessible for all of my users. All of my webpages have been evaluated by the WAVE evaluation tool to ensure that they are accessible for everyone. Secondly I have designed my website so
+        it is easy to both use and navigate. Usability is a crucial aspect for every website to have, so it was important for me to include a cohesive and responsive layout for my users. To make my website cohesive and responsive, I used a very simplistic
+        design and large buttons to switch between pages to make it easy to navigate. </p1>
+
+      <h2> Canvas </h2>
+      <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+      <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "#FF0000"
+        ctx.fillText("Canvas Test ;)", 10, 50);
+
+      </script>
+      <h2> Audio </h2>
+
+      <audio controls>
+  <source src="audio/audio.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+      <p> JJD - Adventure</p>
+      <p> Music provided by NCS</p>
+      <h2> SVG </h2>
+      <img src="images/AC.svg" alt="SVG test" class="box-img2">
+
+    </div>
+  </body>
+
+</html>
