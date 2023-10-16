@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <title>
+      Alex's Projects
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <style>
+      #iframe-container { max-width: 600px; max-height: 450px; margin: 0 auto;
+      /* Center the container horizontally */ overflow: hidden; /* Hide any overflowing
+      content */ }
+    </style>
+  </head>
+  
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo">
+          Home
+        </a>
+      </header>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="links">
+          <li>
+            <a href="index.html">
+              About Alex
+            </a>
+          </li>
+          <li class="active">
+            <a href="generic.html">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="elements.html">
+              Résumé
+            </a>
+          </li>
+        </ul>
+        <ul class="icons">
+          <li>
+            <a href="www.linkedin.com/in/aochamorro" class="icon brands fa-linkedin">
+              <span class="label">
+                Linkedin
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/aochamorro9756?tab=repositories" class="icon brands fa-github">
+              <span class="label">
+                GitHub
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Main -->
+      <div id="main">
+        <!-- Post -->
+        <section class="post">
+          <header class="major">
+            <span class="date">
+              October 25, 2017
+            </span>
+            <h1>
+              Caesar Cipher
+            </h1>
+            <p>
+              This is a basic Caesar cipher encryption program created in JavaScript.
+              Input text into the encryption box to begin.
+            </p>
+            <input id="in">
+            <button type="button" onclick="Caesar()">
+              Encrypt
+            </button>
+            <p id="out">
+            </p>
+            <!–– Encryption program still under construction ––>
+            <script>
+            function Caesar() {
+            var asciiCode, encryptedText = "";
+            var index = 0;
+            var decryptedText = "";
+            //input
+            var inVar = document.getElementById("in").value;
+            var inVar2 = document.getElementById("in2").value;
+            //processing
+            for (index = 0; index < inVar.length; index++) {
+            asciiCode = inVar.charCodeAt(index);
+            asciiCode = asciiCode + 3;
+            encryptedText += String.fromCharCode(asciiCode);
+            }
+            for (index = 0; index < inVar2.length; index++) {
+            asciiCode = inVar2.charCodeAt(index);
+            asciiCode = asciiCode - 3;
+            decryptedText += String.fromCharCode(asciiCode);
+            }
+            //output
+            document.getElementById("out").innerHTML = encryptedText;
+            document.getElementById("out2").innerHTML = decryptedText;
+            }
+            </script>
+            <input id="in2">
+            <button type="button" onclick="Caesar()">Decrypt</button>
+            <p id="out2"></p>
+            </header>
+            </section>
+            </head>
+            <section>
+            <header class="major">
+            <span class="date">June 14, 2022</span>
+            <h1>Simple Calculator</h1>
+            <p>This JavaScript calculator offers straightforward functionality. Start calculating by clicking on any of the buttons.</p>
+            <body>
+            <input type="text" id="display" disabled>
+            <br>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <br>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <br>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <br>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <br>
+            <button onclick="calculateResult()">=</button>
+            <script>
+            // Function to append characters to the display
+            function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+            }
+            // Function to clear the display
+            function clearDisplay() {
+            document.getElementById('display').value = '';
+            }
+            // Function to calculate the result
+            function calculateResult() {
+            const displayValue = document.getElementById('display').value;
+            try {
+            const result = eval(displayValue);
+            document.getElementById('display').value = result;
+            } catch (error) {
+            document.getElementById('display').value = 'Error';
+            }
+            }
+            </script>
+            </body>
+            </section>
+            <section>
+            <header class="major">
+            <span class="date">December 6, 2019</span>
+            <h1>Java Hotel Management System</h1>
+            <p>This collaborative project entails the development of a high-end resort booking application. Within this application, users can create accounts, peruse available rooms, make reservations for their chosen accommodations, manage their booking history, and update their account information. Additionally, the project features an employee interface, granting authorized personnel the ability to access and manipulate the system's booking records.</p>
+            <ul class="actions special">
+            <li>
+            <a href="https://github.com/Dingram91/Group3Project"
+            class="button">
+            View Program
+            </a>
+            </li>
+            </ul>
+            </section>
+            </div>
+            <!-- Footer -->
+            <footer id="footer">
+              <section>
+                <div id="iframe-container">
+                  <iframe id="myIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114141.68684452676!2d-81.9146987517207!3d26.618763688366855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db420189a85429%3A0xc62908530aba258a!2sFort%20Myers%2C%20FL!5e0!3m2!1sen!2sus!4v1696799005239!5m2!1sen!2sus"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+                <script>
+                  $(document).ready(function() {
+                    // Function to resize the iframe
+                    function resizeIframe() {
+                      var iframe = document.getElementById('myIframe');
+                      var newWidth = $(window).width(); // Get the new width of the window
+                      var newHeight = $(window).height(); // Get the new height of the window
+
+                      // Adjust the width and height of the iframe
+                      iframe.style.width = newWidth + 'px';
+                      iframe.style.height = newHeight + 'px';
+                    }
+
+                    // Initial resizing when the page loads
+                    resizeIframe();
+
+                    // Resize the iframe when the window size changes
+                    $(window).on('resize',
+                    function() {
+                      resizeIframe();
+                    });
+                  });
+                </script>
+              </section>
+              <section class="split contact">
+                <section class="alt">
+                  <h3>
+                    Address
+                  </h3>
+                  <p>
+                    Fort Myers, FL 33967
+                  </p>
+                </section>
+                <section>
+                  <h3>
+                    Phone
+                  </h3>
+                  <p>
+                    <a href="#">
+                      +1 (516) 713-3832
+                    </a>
+                  </p>
+                </section>
+                <section>
+                  <h3>
+                    Email
+                  </h3>
+                  <p>
+                    <a href="#">
+                      aochamorro.jobs@pm.me
+                    </a>
+                  </p>
+                </section>
+                <section>
+                  <h3>
+                    Social
+                  </h3>
+                  <ul class="icons alt">
+                    <li>
+                      <a href="www.linkedin.com/in/aochamorro" class="icon brands fa-linkedin">
+                        <span class="label">
+                          Linkedin
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/aochamorro9756?tab=repositories" class="icon brands fa-github">
+                        <span class="label">
+                          GitHub
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+              </section>
+            </footer>
+            <!-- Copyright -->
+            <div id="copyright">
+              <ul>
+                <li>
+                  &copy; Alex Chamorro 2023
+                </li>
+              </ul>
+            </div>
+      </div>
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js">
+      </script>
+      <script src="assets/js/jquery.scrollex.min.js">
+      </script>
+      <script src="assets/js/jquery.scrolly.min.js">
+      </script>
+      <script src="assets/js/browser.min.js">
+      </script>
+      <script src="assets/js/breakpoints.min.js">
+      </script>
+      <script src="assets/js/util.js">
+      </script>
+      <script src="assets/js/main.js">
+      </script>
+  </body>
+
+</html>
